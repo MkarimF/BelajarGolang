@@ -10,7 +10,7 @@ func main() {
 	router := gin.Default()
 
 	router.GET("/books", handlers.GetBooks)
+	router.GET("/books/:id", handlers.GetBooksByID)
 	router.POST("/books", handlers.CreateBook)
-
 	router.Run(":8080")
 }
